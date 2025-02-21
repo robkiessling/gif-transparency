@@ -219,7 +219,7 @@ const Animated_GIF = function Animated_GIF(globalOptions) {
         0.75 + (0.25 * frame.position * 1.0) / frames.length
       )
 
-      while (!powerOfTwo(framePalette.length) && framePalette.length < 256) {
+      while (framePalette.length < 2 || (!powerOfTwo(framePalette.length) && framePalette.length < 256)) {
         framePalette.push(0x000000)
       }
 
